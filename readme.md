@@ -5,10 +5,10 @@ glogger
   - to impliment glogger, first add the import: `import "git.unixvoid.com/mfaltys/glogger"`
   - then initialize the logger:
     ```
-	if *logLevel {
-		fthlogger.LogInit(os.Stdout, os.Stdout, os.Stderr)
-	} else {
-		fthlogger.LogInit(os.Stdout, ioutil.Discard, os.Stderr)
+	if *logLevel {  
+		glogger.LogInit(os.Stdout, os.Stdout, os.Stderr)  
+	} else {  
+		glogger.LogInit(os.Stdout, ioutil.Discard, os.Stderr)  
 	}
 	```
   - to then use the logger, write your print statements like the following:  
