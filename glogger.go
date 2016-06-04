@@ -7,20 +7,24 @@ import (
 
 var (
 	// initialize logger types
-	Info  *log.Logger
-	Debug *log.Logger
-	Error *log.Logger
+	Info    *log.Logger
+	Cluster *log.Logger
+	Debug   *log.Logger
+	Error   *log.Logger
 )
 
-func LogInit(infoHandle io.Writer, debugHandle io.Writer, errorHandle io.Writer) {
+func LogInit(infoHandler, clusterHandler, debugHandler, errorHandler io.Writer) {
 	// read loglevel
-	Info = log.New(infoHandle,
+	Info = log.New(infoHandler,
 		"INFO: ",
 		log.Ldate|log.Ltime|log.Lshortfile)
-	Debug = log.New(debugHandle,
+	Cluster = log.New(clusterHandler,
+		"CLUSTER: ",
+		log.Ldate|log.Ltime|log.Lshortfile)
+	Debug = log.New(debugHandler,
 		"DEBUG: ",
 		log.Ldate|log.Ltime|log.Lshortfile)
-	Error = log.New(errorHandle,
+	Error = log.New(errorHandler,
 		"ERROR: ",
 		log.Ldate|log.Ltime|log.Lshortfile)
 }
