@@ -17,7 +17,7 @@ func LogInit(infoHandler, clusterHandler, debugHandler, errorHandler io.Writer) 
 	// read loglevel
 	Info = log.New(infoHandler,
 		"INFO: ",
-		log.Ldate|log.Ltime|log.Lshortfile)
+		log.Ldate|log.Ltime)
 	Cluster = log.New(clusterHandler,
 		"CLUSTER: ",
 		log.Ldate|log.Ltime|log.Lshortfile)
