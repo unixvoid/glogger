@@ -2,7 +2,7 @@ glogger
 -------
 - glogger is a logging framework written in golang.  
 - usage:  
-  - to impliment glogger, first add the import: `import "git.unixvoid.com/mfaltys/glogger"`
+  - to impliment glogger, first add the import: `import "github.com/unixvoid/glogger"`
   - then initialize the logger:  
     ```
 	if *logLevel {  
